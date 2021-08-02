@@ -1,9 +1,14 @@
-import * as webpack from 'webpack'
+import { Configuration, HotModuleReplacementPlugin } from 'webpack'
+import { merge } from 'webpack-merge'
+import baseConfig from './webpack.base'
+import { Configuration as DevConfiguration } from 'webpack-dev-server'
 
-const isDevelopment = process.env.NODE_ENV === 'development'
-const config: webpack.Configuration = {
-  mode: isDevelopment ? 'development' : 'production',
-  devtool: isDevelopment ? 'cheap' : false,
-}
+const config: Configuration & DevConfiguration = merge(baseConfig, {
+  mode: 'development',
+  devServer: {
+    port: 3060,
+  },
+  plugins: [new HotModuleReplacementPlugin()],
+})
 
 export default config

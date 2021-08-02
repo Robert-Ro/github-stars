@@ -1,5 +1,5 @@
 import React from 'react'
 
-const App: React.FC<{}> = () => <div>1</div>
+const App = (): React.ReactNode => <div>1234</div>
 
 export default App
