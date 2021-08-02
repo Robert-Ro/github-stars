@@ -58,8 +58,8 @@
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "commit": "cz",
     "build": "webpack",
-    "dev": "cross-env NODE_ENV=development TS_NODE_PROJECT=\"tsconfig.webpack.json\" webpack serve -c config/webpack.dev.ts",
-   "electron:dev": "concurrently \"yarn dev\" \"wait-on http://localhost:3060 && tsc -w\" \"wait-on http://localhost:3060 && tsc && electron .\""
+    "dev": "cross-env NODE_ENV=development webpack serve -c config/webpack.dev.ts",
+   "electron:dev": "concurrently \"yarn dev\" \"wait-on http://localhost:3060 && tsc -w\" \"wait-on http://localhost:3060 && tsc && electron ./dist/main.js\""
   },
   "husky": {
     "hooks": {
