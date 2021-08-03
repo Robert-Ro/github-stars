@@ -10,18 +10,16 @@ const Detail = lazy(() => import('./components/detail'))
 
 const App = () => {
   useEffect(() => {
-    // http.get('https://github.com/login/oauth/authorize', {
-    //   params: {
-    //     client_id: process.env.GITHUB_CLIENTID,
-    //     redirect_uri: 'http://localhost:3060',
-    //     login: 'true',
-    //     scope: 'user',
-    //     state: uuid(),
-    //     allow_signup: true,
-    //   },
-    // @https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps#troubleshooting
-    //   withCredentials: false,
-    // })
+    http.get('https://github.com/login/oauth/authorize', {
+      params: {
+        client_id: process.env.GITHUB_CLIENTID,
+        redirect_uri: 'http://localhost:3060',
+        login: 'true',
+        scope: 'user',
+        state: uuid(),
+        allow_signup: true,
+      },
+    })
   })
 
   return (
