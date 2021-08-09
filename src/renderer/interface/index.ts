@@ -102,3 +102,30 @@ interface Owner {
   type: string
   site_admin: boolean
 }
+
+export type Repo2 = Pick<
+  Repo,
+  | 'name'
+  | 'full_name'
+  | 'url'
+  | 'forks_count'
+  | 'description'
+  | 'stargazers_count'
+  | 'language'
+  | 'languages_url'
+  | 'owner'
+  | 'open_issues_count'
+  | 'id'
+  | 'homepage'
+  | 'created_at'
+  | 'updated_at'
+> & {
+  tags: string[]
+  stars: number
+  memo: string
+  category: Category
+}
+interface Category {
+  name: string
+  id: string
+}

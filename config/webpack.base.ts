@@ -102,7 +102,7 @@ const config: Configuration = {
   resolve: {
     extensions: ['.js', '.tsx', '.ts', '.json'],
     alias: {
-      '@': resolve(__dirname, '../src'),
+      '@': resolve(__dirname, '../src/renderer'),
     },
   },
   output: {

@@ -11,13 +11,7 @@ const Detail = () => {
     })
   })
   if (data) {
-    return (
-      <div
-        dangerouslySetInnerHTML={{
-          __html: data,
-        }}
-      ></div>
-    )
+    return <ReactMarkdown>{data}</ReactMarkdown>
   }
   return null
 }

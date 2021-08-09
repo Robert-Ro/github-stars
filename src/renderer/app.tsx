@@ -3,6 +3,7 @@ import { Row, Col, Spin } from 'antd'
 import 'tailwindcss/tailwind.css'
 import http from '@/services/http'
 import { v4 as uuid } from 'uuid'
+import 'github-markdown-css'
 
 const Settings = lazy(() => import('./components/settings'))
 const List = lazy(() => import('./components/list'))

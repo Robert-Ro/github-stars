@@ -2,7 +2,7 @@ import { app, BrowserWindow } from 'electron'
 import { join } from 'path'
 import isDev from 'electron-is-dev'
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer'
-import { title } from './configs'
+import { title } from '../shared'
 
 let mainWindow: BrowserWindow | null = null
 function createWindow() {
